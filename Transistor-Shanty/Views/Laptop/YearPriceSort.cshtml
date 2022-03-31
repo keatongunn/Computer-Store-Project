@@ -1,0 +1,13 @@
+﻿@model Transistor_Shanty.ViewModels.LaptopAndBrandViewModel
+
+<h2>Transistor Shanty</h2>
+
+<form asp-controller="laptop" asp-action="YearPriceSort" method="post">
+    <select name="dateId" asp-items="Model.higherLower"></select>
+    <input type="datetime" name="filter" placeholder="YYYY-MM-DD"/>
+    <select name="numId" asp-items="Model.higherLower"></select>
+    <input type="number" name="price" placeholder="Enter a Price"/>
+    <button type="submit">Submit</button>
+</form>
+
+<li><a asp-action="Index">Back to Home</a></li>

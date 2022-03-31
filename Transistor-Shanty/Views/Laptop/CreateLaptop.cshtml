@@ -1,0 +1,15 @@
+﻿@model Transistor_Shanty.ViewModels.LaptopAndBrandViewModel
+<h2>Transistor Shanty</h2>
+<h3>Add a new Laptop to the Database</h3>
+
+<form asp-controller="laptop" asp-action="CreateLaptop" method="post">
+    <select name="brandId" id="brandId" asp-items="Model.SelectListBrands"></select>
+    <input type="text" name="model" placeholder="Model"/>
+    <input type="number" name="price" placeholder="Price"/>
+    <input type="datetime" name="year" placeholder="Year"/>
+    <input type="number" name="quantity" placeholder="Quantity"/>
+    <select name="name" asp-items="Html.GetEnumSelectList<LaptopType>()"></select>
+    <button type="submit">Submit</button>
+</form>
+
+<li><a asp-action="Index">Back to Home</a></li>

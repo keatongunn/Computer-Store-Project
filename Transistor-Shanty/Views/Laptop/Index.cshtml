@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Transistor_Shanty.Models.Laptop>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Transistor Shanty</h1>
+
+<p>
+    <a asp-action="Pages">Pages</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Brand
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                Available As
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>            
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LaptopType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>            
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<li><a asp-action="Index">Back to Home</a></li>

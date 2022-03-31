@@ -1,0 +1,17 @@
+﻿@model List<Laptop>
+
+<h2>Transistor Shanty</h2>
+<h3>Filter By Price</h3>
+
+<form asp-controller="laptop" asp-action="PriceFilter" method="post">
+    <input type="number" name="price" placeholder="Laptops Less Than..."/>
+    <button type="submit">Submit</button>
+</form>
+
+@foreach(var item in Model){
+    <ul>
+        <li>@item.Brand.Name @item.Model</li>
+    </ul>
+}
+
+<li><a asp-action="Index">Back to Home</a></li>

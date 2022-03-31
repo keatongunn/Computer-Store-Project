@@ -1,0 +1,13 @@
+﻿@model Transistor_Shanty.ViewModels.LaptopAndBrandViewModel
+
+<h2>Transistor Shanty</h2>
+
+<form asp-controller="laptop" asp-action="BrandDescend" method="post">
+    <h4>Choose a Brand</h4>
+    <select name="brandId" asp-items="Model.SelectListBrands"></select>
+    <h4>Order by Price, or Year</h4>
+    <select name="filterId" asp-items="Model.filterList"></select>
+    <button type="submit">Submit</button>
+</form>
+
+<li><a asp-action="Index">Back to Home</a></li>

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<IGrouping<LaptopType, Laptop>>
+
+<h2>Transistor Shanty</h2>
+<h3>New, Refurbished, and Rentals</h3>
+
+@foreach(var group in Model) {
+    <h4>All @group.Key Laptops:</h4>
+    @foreach(var element in group)
+    {
+        <div>@element.Brand.Name @element.Model</div>
+    }
+}
+
+<li><a asp-action="Index">Back to Home</a></li>

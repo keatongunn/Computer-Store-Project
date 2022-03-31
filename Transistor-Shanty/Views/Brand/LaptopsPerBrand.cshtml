@@ -1,0 +1,13 @@
+﻿@model List<Brand>
+
+<h2>Transistor Shanty</h2>
+@foreach(var item in Model){
+    <h3>@item.Name @item.Id</h3>
+    @foreach(var laptop in @item.Laptops)
+    {
+        <div>@laptop.Model</div>
+
+    }
+}
+
+<li><a asp-controller="laptop" asp-action="Index">Back to Home</a></li>
